@@ -73,6 +73,6 @@ end
 
 gem "devise", "~> 4.9"
 
-gem "fake", "~> 1.42"
+gem "faker"
 
 gem "kaminari", "~> 1.2"
