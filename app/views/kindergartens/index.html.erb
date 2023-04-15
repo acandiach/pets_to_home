@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Kindergartens</h1>
+
+<div id="kindergartens">
+  <% @kindergartens.each do |kindergarten| %>
+    <article id="article">
+      <h2><%= kindergarten.name %></h2>
+      <% if kindergarten.photo.attached? %>
+        <%= image_tag kindergarten.photo, width: 350 %>
+      <% end %>
+
+      <footer class="footer">
+        <span>Price: <%= kindergarten.price %></span>
+        <span>City: <%= kindergarten.city.name %></span>
+        <%= link_to "Show this kindergarten", kindergarten %>
+      </footer>
+    </article>
+    <p>
+      <%= link_to "Show this kindergarten", kindergarten %>
+    </p>
+  <% end %>
+</div>
+<%= paginate @kindergartens %>
+
+<%= link_to "New kindergarten", new_kindergarten_path %>

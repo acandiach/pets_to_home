@@ -1,0 +1,19 @@
+<div id="<%= dom_id kindergarten %>">
+  <% if kindergarten.photo.attached? %>
+    <%= image_tag kindergarten.photo, width: 900 %>
+  <% end %>
+  <article id="article">
+    <h2><%= kindergarten.name %></h2>
+    <h3>Description:<p> <%= kindergarten.description %></p></p>
+
+    <footer class="footer">
+      <span>Price: <%= kindergarten.price %></span>
+      <span>City: <%= kindergarten.city.name %></span>
+      <span>Phone: <%= kindergarten.phone %></span>
+      <span>Email: <%= kindergarten.email %></span>
+      <ul>
+        <span>Pets: <%= kindergarten.pet.name %></span>
+      </ul>
+    </footer>
+  </article>
+</div>

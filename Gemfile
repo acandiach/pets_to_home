@@ -70,3 +70,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise", "~> 4.9"
+
+gem "fake", "~> 1.42"
+
+gem "kaminari", "~> 1.2"
